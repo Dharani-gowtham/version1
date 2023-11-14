@@ -17,7 +17,7 @@ credentials:
       name: Charan
       password: $2b$12$VmSC4AQ63i3iAzPF7MvG/unnTnwiZU.zMqBPf90BFcq0Ppop1kqpm
 cookie:
-  expiry_days: 30
+  expiry_days: 1
   key: some_signature_key # Must be string
   name: some_cookie_name
 preauthorized:

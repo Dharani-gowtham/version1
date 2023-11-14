@@ -99,7 +99,8 @@ name, auth_status, username = authenticator.login('Login', 'sidebar')
 
 # --- login validation ---
 if st.session_state["authentication_status"]:
-    st.sidebar.subheader(f'Welcome *{st.session_state["name"]}*')
+    user_name = st.session_state["name"]
+    st.sidebar.subheader(f'Welcome *{user_name}*')
 
     # --- admin page
     if username == "dharani":
@@ -111,7 +112,7 @@ if st.session_state["authentication_status"]:
         my_grid = grid([4, 1, 1, 1], 1, [1, 1], vertical_align='bottom')
         task = my_grid.text_input("Task")
         date = my_grid.date_input("Select Date", format="DD.MM.YYYY")
-        assign_to = my_grid.selectbox("Assign to", ['Dharani', 'Gowtham', 'Bharani'])
+        assign_to = my_grid.selectbox("Assign to", ['Dharani Gowtham', 'Bharani Arumugam', 'Lekhan', 'Charan'])
         if my_grid.button('Add', use_container_width=True):
             admin_insert_data(assign_to, task, date)
 
@@ -156,7 +157,7 @@ if st.session_state["authentication_status"]:
     # --- user page
     else:
         # --- Data Fetching ---
-        list_task, uncomplete_task, completed_task = user_fetch_data('Dharani')
+        list_task, uncomplete_task, completed_task = user_fetch_data(f'{user_name}')
         un_task = [item[0] for item in uncomplete_task]
 
         # --- Task Update ---
