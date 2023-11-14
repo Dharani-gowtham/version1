@@ -8,6 +8,14 @@ credentials:
       email: rbriggs@gmail.com
       name: Bharani Arumugam
       password: $2b$12$VmSC4AQ63i3iAzPF7MvG/unnTnwiZU.zMqBPf90BFcq0Ppop1kqpm
+    lekhan:
+      email: lekan@gmail.com
+      name: Lekhan
+      password: $2b$12$VmSC4AQ63i3iAzPF7MvG/unnTnwiZU.zMqBPf90BFcq0Ppop1kqpm
+    charan:
+      email: charanpothuri@gmail.com
+      name: Charan
+      password: $2b$12$VmSC4AQ63i3iAzPF7MvG/unnTnwiZU.zMqBPf90BFcq0Ppop1kqpm
 cookie:
   expiry_days: 30
   key: some_signature_key # Must be string
